@@ -56,7 +56,7 @@ const setCatsListToStorage = (cats: CatType[]) => {
 export const CatContextProvider = ({ children }: ChildrenType) => {
 
   const [catsList, setCatsList] = useState(getAllCats())
-  const [activeCat, setActiveCat] = useState<CatType>(initialCatsList[0])
+  const [activeCat, setActiveCat] = useState<CatType>(catsList[0] ?? initialCatsList[0])
 
   const onSelectCat: CatContextType['onSelectCat'] = (newCatId) => {
     console.log("🚀 ~ CatContextProvider ~ newCatId:", newCatId)
