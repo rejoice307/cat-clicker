@@ -5,6 +5,7 @@ import { CatContextProvider } from './states/useCatContext'
 import "./main.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CatClicker from './pages/CatClicker'
+import Noter from './pages/Noter'
 
 export function Main () {
 
