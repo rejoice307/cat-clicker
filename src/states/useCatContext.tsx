@@ -59,7 +59,6 @@ export const CatContextProvider = ({ children }: ChildrenType) => {
   const [activeCat, setActiveCat] = useState<CatType>(catsList[0] ?? initialCatsList[0])
 
   const onSelectCat: CatContextType['onSelectCat'] = (newCatId) => {
-    console.log("🚀 ~ CatContextProvider ~ newCatId:", newCatId)
     const foundCat = catsList.find((cat) => cat.id === newCatId)
     if (foundCat) setActiveCat(foundCat)
   }
